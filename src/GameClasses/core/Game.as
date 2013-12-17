@@ -10,13 +10,14 @@ package GameClasses.core
 	 */
 	public class Game extends Sprite 
 	{
-		private var _soundManager;
+		public var soundManager:SoundManager;
+		public var 
 		
 		public function Game() 
 		{
 			super();
 			
-			_soundManager = new SoundManager();
+			soundManager = new SoundManager();
 			
 			this.addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 		}
