@@ -6,7 +6,6 @@ package GameClasses.managers
 	 */
 	public class SoundManager 
 	{
-		
 		public function SoundManager() 
 		{
 			

@@ -2,6 +2,7 @@ package GameClasses.core
 {
 	import GameClasses.managers.SoundManager;
 	import starling.display.Sprite;
+	import starling.events.Event;
 	
 	/**
 	 * ...
@@ -15,12 +16,16 @@ package GameClasses.core
 		{
 			super();
 			
-			init();
+			_soundManager = new SoundManager();
+			
+			this.addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 		}
 		
-		private function init():void 
+		private function onAddedToStage(e:Event):void 
 		{
-			_soundManager = new SoundManager();
+			removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
+			
+			
 		}
 		
 	}

@@ -1,6 +1,5 @@
 package GameClasses.core
 {
-	import flash.utils.getQualifiedClassName;
 	/**
 	 * @author Lazarescu Petru Andrei
 	 */
@@ -10,13 +9,7 @@ package GameClasses.core
     //--------------------------------------
     
 	// Flash
-	
-	// PureMVC
-	
-	// Structure
-	
-	// Custom
-	
+	import flash.utils.getQualifiedClassName;
     //--------------------------------------
     // CLASS
     //--------------------------------------
@@ -31,6 +24,13 @@ package GameClasses.core
         //--------------------------------------
         // Properties - PUBLIC
         //--------------------------------------
+		
+		public const GAME_LOAD_STATE:String = getQualifiedClassName(this) + ".GAME_LOAD_STATE";
+		public const MENU_STATE:String = getQualifiedClassName(this) + ".MENU_STATE";
+		public const MAP_SELECT_STATE:String = getQualifiedClassName(this) + ".MAP_SELECT_STATE";
+		public const PLAY_STATE:String = getQualifiedClassName(this) + ".PLAY_STATE";
+		public const GAME_OVER_STATE:String = getQualifiedClassName(this) + ".GAME_OVER_STATE";
+		
 		
 		/**
 		 * The only instance of the GameStates class.
@@ -49,14 +49,6 @@ package GameClasses.core
 			
 			return (_instance as GameStates);
 		}
-		
-		
-		public const GAME_LOAD_STATE:String = getQualifiedClassName(this) + ".GAME_LOAD_STATE";
-		public const MENU_STATE:String = getQualifiedClassName(this) + ".MENU_STATE";
-		public const MAP_SELECT_STATE:String = getQualifiedClassName(this) + ".MAP_SELECT_STATE";
-		public const PLAY_STATE:String = getQualifiedClassName(this) + ".PLAY_STATE";
-		public const GAME_OVER_STATE:String = getQualifiedClassName(this) + ".GAME_OVER_STATE";
-		
 	}
 	
 }
